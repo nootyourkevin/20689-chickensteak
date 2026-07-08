@@ -71,11 +71,11 @@ class AudioPlayer(QObject):
                 wf.writeframes(audio_bytes)
 
             self.playback_started.emit()
-            print(f"[AudioPlayer] 使用 aplay 播放: {wav_path} (采样率: {sample_rate}Hz)")
+            print(f"[AudioPlayer] 使用 paplay 播放: {wav_path} (采样率: {sample_rate}Hz)")
 
-            # 使用 aplay 命令播放（更可靠）
+            # 使用 paplay 命令播放（通过 PulseAudio，兼容性好）
             result = subprocess.run(
-                ["aplay", "-D", "plughw:1,0", wav_path],
+                ["paplay", wav_path],
                 capture_output=True,
                 text=True,
                 timeout=30,
