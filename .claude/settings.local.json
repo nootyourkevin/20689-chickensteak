@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.elfboard.com)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(node -e \"require\\('docx'\\)\")",
+      "Bash(npm install *)",
+      "Bash(node *)",
+      "Bash(npm root *)",
+      "Bash(NODE_PATH=\"C:/Users/Only_/AppData/Roaming/npm/node_modules\" node generate_prd.js)",
+      "Bash(pandoc \"E:/ClaudeCode/Language_learner/PRD_端侧AI语言学习机.docx\" -t markdown --wrap=none)",
+      "Read(//root/paroli-daemon/**)",
+      "Bash(./paroli-cli --help)",
+      "Bash(git init *)",
+      "Bash(git branch *)",
+      "Bash(git add *)"
+    ]
+  }
+}
