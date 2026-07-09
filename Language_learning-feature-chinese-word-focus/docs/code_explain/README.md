@@ -9,7 +9,6 @@
 | 文件 | 说明 |
 |------|------|
 | [01_ASR_语音识别.md](01_ASR_语音识别.md) | ASR 接口、原版、改进版（立体声转单声道） |
-| [02_LLM_大语言模型.md](02_LLM_大语言模型.md) | LLM 接口、DeepSeek API、MiMo API |
 | [03_TTS_语音合成.md](03_TTS_语音合成.md) | TTS 接口、Paroli TTS（RKNN 加速） |
 | [04_录音器.md](04_录音器.md) | 录音器配置、设备打开、循环录音 |
 | [05_模型串联.md](05_模型串联.md) | 核心串联逻辑：ASR → LLM → TTS |
@@ -44,16 +43,11 @@ TTS (paroli_tts.py)
 | ASR 接口 | `src/line_c/asr/base.py` |
 | ASR 原版 | `src/line_c/asr/sensevoice_asr.py` |
 | ASR 改进版 | `src/line_c/asr/asrtest.py` |
-| LLM 接口 | `src/line_c/llm/base.py` |
-| DeepSeek API | `src/line_c/llm/cloud_llm.py` |
-| MiMo API | `src/line_c/llm/cloud_llm_mimo.py` |
 | TTS 接口 | `src/line_c/tts/base.py` |
 | Paroli TTS | `src/line_c/tts/paroli_tts.py` |
 | 录音器 | `src/line_c/audio/recorder.py` |
 | 模型串联 | `src/line_c/ui/pages/chat_page.py` |
 | 原版入口 | `src/main.py` |
-| MiMo 入口 | `src/main_mimo.py` |
-| V4 Flash 入口 | `src/main_deepseek_v4_flash.py` |
 | 配置文件 | `src/line_c/config.py` |
 
 ---
